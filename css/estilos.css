@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'Neutra';
+    src: url('../fonts/neutradisplaytitling-webfont.woff2') format('woff2'),
+        url('../fonts/neutradisplaytitling-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-medium-webfont.woff2') format('woff2'),
+        url('../fonts/montserrat-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary: #d4ccc7;
+    --secondary: #090909;
+    --terciary: #747470;
+    --bg-light: #F2F2F2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat';
+    color: var(--terciary);
+}
+
+/* ------------ */
+
+h1 {
+    font-size: 3rem;
+    font-family: 'Neutra';
+}
+
+h2 {
+    color: var(--primary);
+    border-radius: .5rem;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+p small {
+    border: 1px solid var(--terciary);
+    color: var(var(--terciary));
+    font-size: .8rem;
+    display: inline-block;
+    padding: .25rem .5rem;
+}
+
+.btn-danger {
+    --bs-btn-bg: var(--primary);
+    --bs-btn-border-color: var(--primary);
+    --bs-btn-hover-bg: var(--primary);
+    --bs-btn-hover-border-color: var(--primary);
+    --bs-btn-active-color: var(--primary);
+    --bs-btn-active-bg: var(--primary);
+    --bs-btn-active-border-color: var(--primary);
+    --bs-btn-disabled-bg: var(--primary);
+    --bs-btn-disabled-border-color: var(--primary);
+}
+
+.btn-success {
+    --bs-btn-bg: var(--secondary);
+    --bs-btn-border-color: var(--secondary);
+    --bs-btn-hover-bg: var(--secondary);
+    --bs-btn-hover-border-color: var(--secondary);
+    --bs-btn-active-bg: var(--secondary);
+    --bs-btn-active-border-color: var(--secondary);
+    --bs-btn-disabled-bg: var(--secondary);
+    --bs-btn-disabled-border-color: var(--secondary);
+}
+
+
+textarea {
+    resize: none;
+}
+
+/* ------------ */
+
+.logo {
+    max-width: 150px;
+    width: 100%;
+}
+
+#portada {
+    background-image: url('../img/portada.jpg'); /* Asegúrate de que esta ruta sea correcta */
+    background-size: cover; /* Ajusta la imagen para cubrir el área del contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    min-height: 50vh; /* Asegura que el contenedor tenga al menos el 50% de la altura de la ventana */
+    display: flex; /* Utiliza flexbox para alinear el contenido dentro del contenedor */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    text-align: center; /* Centra el texto */
+    color: #fff; /* Color del texto para que contraste con el fondo */
+    padding: 2rem; /* Añade un poco de relleno alrededor del contenido */
+}
+
+h1, p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    h1, p {
+        font-size: 1.5rem; /* Ajusta el tamaño del texto en dispositivos móviles */
+    }
+}
+
+#ofertas {
+    background-color: var(--bg-light);
+}
+
+#novedades figure {
+    height: 30vh;
+}
+
+#novedades img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+
+    #consultas {
+        background: url(../img/bg5.jpg) no-repeat right top;
+    }
+
+}
+
+footer {
+    background-color: var(--secondary);
+    padding: 1rem 0 .25rem 0;
+    text-align: center;
+    color: var(--secondary);
+}
+footer {
+    background-color: #333;
+    color: rgb(0, 0, 0);
+    padding: 20px 0;
+    text-align: center;
+}
+footer p {
+    font-size: 0.875rem; /* Tamaño de texto más pequeño */
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: rgb(53, 53, 53);
+    font-size: 1.5rem;
+}
+
+.social-icons a:hover {
+    color: #848484; /* Color de resaltado para WhatsApp */
+}
+
+#servicios .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#servicios article {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Asegura que todos los artículos se estiren al mismo alto */
+    text-align: center;
+    flex: 1;
+    margin-bottom: 1.5rem; /* Espacio entre las filas */
+}
+
+#servicios .row > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Alinea el contenido de arriba a abajo */
+}
+
+#servicios figure {
+    margin: 0; /* Quita el margen para que la imagen se alinee correctamente */
+    flex: 1; /* Permite que el contenedor de la imagen ocupe el espacio necesario */
+}
+
+#servicios figure img {
+    width: 100%;
+    height: 200px; /* Ajusta la altura fija */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+}
+
+#servicios .text-center {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Alinea el contenido de arriba a abajo */
+}
+
+.social-icons {
+    font-size: 24px;
+}
+
+.social-icon {
+    color: var(--terciary); /* Cambia el color según tu diseño */
+    margin-left: 15px; /* Espacio entre los íconos */
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #000; ; /* Color de resaltado para WhatsApp, cambia según el icono */
+}
